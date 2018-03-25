@@ -1194,12 +1194,13 @@ namespace KlayGE
 		caps_.mrt_independent_bit_depths_support = true;
 		caps_.logic_op_support = true;
 		caps_.independent_blend_support = true;
-		caps_.draw_indirect_support = true;
+		caps_.draw_indirect_support = false;	// TODO
 		caps_.no_overwrite_support = true;
 		caps_.full_npot_texture_support = true;
 		caps_.render_to_texture_array_support = true;
 		caps_.render_to_msaa_texture_support = true;
 		caps_.load_from_buffer_support = true;
+		caps_.uavs_at_all_stage_support = (d3d_feature_level_ >= D3D_FEATURE_LEVEL_11_1);
 		caps_.gs_support = true;
 		caps_.hs_support = true;
 		caps_.ds_support = true;
